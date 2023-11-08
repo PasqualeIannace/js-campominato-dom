@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #888888;
+}
+
+header {
+    margin-bottom: 3em;
+    border: 5px outset;
+    color: #f3f30b;
+    background: #BDBDBD;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container {
+    margin: 1em;
+    border: 4px solid;
+    padding: 1em;
+    border-color: #7B7B7B white white #7B7B7B;
+    background: #BDBDBD;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 800px;
+    width: 800px;
+    border: 6px solid;
+    border-color: #7B7B7B white white #7B7B7B;
+}
+
+.border {
+    border: 4px outset white;
+    height: 840px;
+    width: 805px;
+    margin: 0 auto;
+    padding: 1em;
+    display: flex;
+    background: #BDBDBD;
+}
+
+.square {
+    border: 4px outset white;
+    /* height: calc(100% / 10);
+    width: calc(100% / 10); */
+    text-align: center;
+    padding-top: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: #BDBDBD;
+}
+
+.cellaClick {
+    border: 2px solid gray;
+    color: white;
+}
