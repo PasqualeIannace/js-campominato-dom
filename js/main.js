@@ -28,7 +28,7 @@ function celleGenerator(difficult) {
     for(let i = 1; i <= numCelle; i++) {
 
 
-        // grid.innerHTML += `<div class "square">${i}</div>`;
+        
         let cella = document.createElement("div");
         cella.classList.add("square");
         cella.innerHTML += `${i}`;
