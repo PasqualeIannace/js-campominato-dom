@@ -1,11 +1,13 @@
 let grid = document.getElementById("grid");
 let punteggio = document.getElementById("punteggio");
+let game = true;
 
 function play() {
     console.log("Hai cliccato")
     // RESET GRIGLIA
     grid.innerHTML = "";
     punteggio.innerHTML = 0;
+    game = true;
     celleGenerator();
 }
 
@@ -32,9 +34,11 @@ function celleGenerator(difficult) {
     for(x = 0; x < 16; x++) {
         bomba.push(randomNumber(1, numCelle));
     }
-
     console.log("Array di bombe:", bomba);
 
+    // CREO TROFEO
+    const trophy = randomNumber(1, numCelle);
+    console.log("Casella vincente: ", trophy);
 
 
     // CREO CELLE
@@ -50,15 +54,27 @@ function celleGenerator(difficult) {
 
         // CLICK CELLA
         cella.addEventListener("click", function() {
-            console.log("Cella: ", i);
-            cella.classList.toggle("cellaClick");
 
-            if(bomba.includes(i)) {
-                console.log("BOOOM!");
+            // VERIFICO STATO PARTITA
+            if(game == true){
+
+                console.log("Cella: ", i);
+                cella.classList.toggle("cellaClick");
+
+                if(bomba.includes(i)) {
+                    alert("BOOOM! Hai perso!");
+                    cella.innerHTML = `<i class="fa-solid fa-bomb fa-xl" style="color: #000000;"></i>`;
+                    game = false;
+                }
+
+                punteggio.innerHTML++;
+
+                if(trophy == i) {
+                    alert("HAI VINTO!");
+                    cella.innerHTML = `<i class="fa-solid fa-trophy fa-xl" style="color: #f3f30b;"></i>`;
+                    game = false;
+                }
             }
-
-            punteggio.innerHTML++;
-
         })
     }
 
