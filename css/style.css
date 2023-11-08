@@ -70,3 +70,18 @@ header {
     padding: 0.1em 0.6em;
     margin: 0.2em;
 }
+
+#level {
+    height: 3em;
+    background: #BDBDBD;
+    border: 5px solid;
+    border-color: white #7B7B7B #7B7B7B white;
+}
+
+#play {
+    height: 3em;
+    width: 8em;
+    background: #BDBDBD;
+    border: 5px solid;
+    border-color: white #7B7B7B #7B7B7B white;
+}
