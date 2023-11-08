@@ -62,3 +62,11 @@ header {
     border: 2px solid gray;
     color: white;
 }
+
+#punteggio {
+    color: red;
+    font-family: 'PF Arma Five', sans-serif;
+    font-size: 2em;
+    padding: 0.1em 0.6em;
+    margin: 0.2em;
+}
