@@ -31,14 +31,30 @@ function celleGenerator(difficult) {
     // CREO BOMBE
     const bomba = [];
 
-    for(x = 0; x < 16; x++) {
-        bomba.push(randomNumber(1, numCelle));
-    }
+        while(bomba.length < 16) {
+            // creo numero random
+            const random = randomNumber(1, numCelle);
+            // verifico doppione
+            if(bomba.indexOf(random) === -1) {
+                bomba.push(random);
+            }
+        }
+    
     console.log("Array di bombe:", bomba);
 
     // CREO TROFEO
-    const trophy = randomNumber(1, numCelle);
-    console.log("Casella vincente: ", trophy);
+    let counter = 0; 
+    while(counter < 1) {
+        trophy = randomNumber(1, numCelle);
+        // verifico eventuale doppione con bombe
+        if(bomba.indexOf(trophy) === -1) {
+            console.log("Sei nel controllo trofeo");
+            counter++;
+        }
+
+        console.log("Casella vincente: ", trophy);
+    }
+
 
 
     // CREO CELLE
